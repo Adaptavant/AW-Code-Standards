@@ -50,11 +50,10 @@ tasks.withType(FindBugs) {
     }
 }
 
-tasks.withType(Pmd) {
-    reports {
-        xml.enabled = false
-        html.enabled = true
-    }
+staticCodeAnalysis {
+    findbugsExclude = "https://raw.githubusercontent.com/Adaptavant/AW-Code-Standards/master/java/config/v0.0.1/findbugs/excludeFilter-main.xml"
+    checkstyleRules = "https://raw.githubusercontent.com/Adaptavant/AW-Code-Standards/master/java/config/v0.0.1/checkstyle/checkstyle-main.xml"
+    pmdRules = "https://raw.githubusercontent.com/Adaptavant/AW-Code-Standards/master/java/config/v0.0.1/pmd/pmd-main-pmd-6.xml"
 }
 
 ```
