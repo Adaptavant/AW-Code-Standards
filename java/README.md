@@ -26,7 +26,7 @@ Static Code Analysis wraps around [Checkstyle](http://checkstyle.sourceforge.net
 
 > **Note:** FindBugs is revamped as SpotBugs, so we'll be migrating in future to avail new updates.
 
-#### Gradle Config:
+#### `build.gradle` Gradle Config:
 
 ```groovy
 buildscript {
@@ -67,4 +67,33 @@ plugins {
 ```
 
 The plugin will add the task to run each analyser individually and also hooked to be run as part of the `check` task of the Java Plugin.
+
+Run "gradle check" from the root of the project to run the analyzers:
+```
+$ gradle check
+```
+
+To execute individual plugins, type `gradle tasks --all` to see all possible tasks.  Here are examples of individual code quality tasks:
+
+```
+checkstyle
+checkstyleMain - Run Checkstyle analysis for main classes
+checkstyleTest - Run Checkstyle analysis for test classes
+
+cpd
+
+findbugs
+findbugsMain - Run FindBugs analysis for main classes
+findbugsTest - Run FindBugs analysis for test classes
+pmd
+pmdMain - Run PMD analysis for main classes
+pmdTest - Run PMD analysis for test classes
+```
+
+For instance, to run only the cpd plugin, you would type:
+
+```
+$ gradle cpd   # replace cpd with any of the above tasks.
+```
+
 
