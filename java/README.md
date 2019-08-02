@@ -5,7 +5,7 @@
 
 [Java: Google-Java-Format](https://github.com/google/google-java-format)
 
-Note: This [plugin](https://github.com/google/google-java-format#intellij-android-studio-and-other-jetbrains-ides.) will be helpful to auto fix most of the CheckStyle warnings. **But remember this will modify every line, So I hope you aware that will lead to more conflicts for team with multiple branchs. Recommend to plan well before using this formattor.**
+Note: This [plugin](https://github.com/google/google-java-format#intellij-android-studio-and-other-jetbrains-ides.) will be helpful to auto fix most of the CheckStyle warnings. **But remember this will modify every line, So I hope you aware that will lead to more conflicts for the team uses multiple git branches. Recommend to plan well before using this formattor.**
 
 #### For Static Code Analysis:
 
