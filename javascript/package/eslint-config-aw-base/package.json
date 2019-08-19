@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-aw",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "The package provides AW Eslint Base config JS for '.eslintrc' as an extensible shared config.",
   "main": "index.js",
   "scripts": {
