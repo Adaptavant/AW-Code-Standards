@@ -1,0 +1,13 @@
+test-package
+node_modules
+/coverage
+/.nyc_output
+npm-debug.log
+package-lock.json
+yarn.lock
+.npmrc
+.build
+
+.DS_Store
+.idea
+*.iml
