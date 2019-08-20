@@ -11,12 +11,12 @@ This style guide is a set of standards(extended from [Airbnb style guide](https:
 
 Please refer the [link](https://eslint.org/docs/user-guide/configuring) to learn more about ESLint configuration and [extending](https://eslint.org/docs/user-guide/configuring#extending-configuration-files).
 
-We recommend to use .eslintrc file, which helps us to extend multiple config incase of if have both es5 and es6 code base. [For more details](https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config)
+We recommend using .eslintrc file, which helps us to extend multiple configs, in case of if we have both ES5 and ES6 code base. [For more details](https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config)
 
 Eg. folder Structure: 
 
     ├── .app                  
-      ├── v1                  # Source files 
+      ├── v1                        # Source files 
         ├── legacy                  # Legacy files 
           ├── code.js               # Old code base
           ├── .eslintrc             # Configuration file 
@@ -31,16 +31,21 @@ Eg .eslintrc
 }
 ```
 
-## Step 1:
+# Step 1:
 
-### We export two set of ESLint configuration for you usage.
+## We export two sets of ESLint configuration for your usage.
 
- - [Stage 1](#stage-1) - **Which will show warnings**.
+ - [Stage 1](#stage-1) - **Which is intended to show only warnings**.
    -  [Legacy](#stage-1-legacy)
    -  [Default](#stage-1-default)
  - [Default]()   
    -  [Legacy](#legacy)
    -  [Default](#default)
+ - [Auto Fix](#fixing-problems)
+
+## Stage 1
+
+  **Stage 1** is meant for migration propose and especially for our legacy codebase to migrate gradually into our new code standards. Which will not stop your build process even if it has any errors. We **highly recommend** to use **[default](#default)** for any **new module/project/feature**.
  
 ### Stage 1 Legacy
 
@@ -49,19 +54,65 @@ Eg .eslintrc
     Add "extends": "aw/stage-1/legacy" to your .eslintrc.
 
 ### Stage 1 Default
-  Default configuration for ES6 code base and it will only show warnings.
+  The stage 1 default configuration for ES6 code base and it will only show warnings.
 
     Add "extends": "aw/stage-1" to your .eslintrc.
 
-## Step 2:
+## Default
+
+**Default** is intended for those who migrated and especially for our any new codebase.
+
+ The default configuration for ES6 code base and it will throw an error for any violation.
+
+    Add ```"extends": "aw" ```to your .eslintrc.
+
+### Default Legacy
+
+  Legacy configuration for ES5 and JQuery code base and it will also throw an error for any violation.
+
+    Add "extends": "aw/legacy" to your .eslintrc.
+
+
+# Step 2:
 
   Ways To run eslint.
 
-### NPM script package.json
+### NPM script
+
+Add script in your package.json.
 
       Add "lint" : "eslint js/*.js"
 
-and 
+### Fixing problems: 
+
+       --fix                          Automatically fix problems
+       --fix-dry-run                  Automatically fix problems without saving the changes to the file system
+       --fix-type Array               Specify the types of fixes to apply (problem, suggestion, layout)
+
+For More options: [check here](https://eslint.org/docs/user-guide/command-line-interface#options)
+
+
+eg: 
+
+```json
+{
+  "name": "BigQuery",
+  "version": "1.0.0",
+  "description": "To generate BigQuery sample data ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint" : "eslint js/*.js --fix-dry-run"
+  },
+  "author": "bala-raj",
+  "license": "ISC"
+}
+```
+
+**Note:** Please pass the argument based on your use case and **we hope you understand what you are doing when you are using auto fix**, the reason this will do changes in source files so be cautious.
+
+then,  
  
  ```sh
   npm run lint 
