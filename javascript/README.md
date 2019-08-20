@@ -11,7 +11,7 @@ This style guide is a set of standards(extended from [Airbnb style guide](https:
 
 Please refer the [link](https://eslint.org/docs/user-guide/configuring) to learn more about ESLint configuration and [extending](https://eslint.org/docs/user-guide/configuring#extending-configuration-files).
 
-We recommend using .eslintrc file, which helps us to extend multiple configs, in case of if we have both ES5 and ES6 code base. [For more details](https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config)
+We recommend using .eslintrc file, which helps us to extend multiple configs, in case of if we have both **ES5** and **ES6** code base. [For more details](https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config)
 
 Eg. folder Structure: 
 
@@ -49,12 +49,12 @@ Eg .eslintrc
  
 ### Stage 1 Legacy
 
-  Legacy configuration for ES5 and JQuery code base and it will only show warnings.
+  Legacy configuration for **ES5** and **JQuery** code base and it will only show warnings.
 
     Add "extends": "aw/stage-1/legacy" to your .eslintrc.
 
 ### Stage 1 Default
-  The stage 1 default configuration for ES6 code base and it will only show warnings.
+  The stage 1 default configuration for **ES6** code base and it will only show warnings.
 
     Add "extends": "aw/stage-1" to your .eslintrc.
 
@@ -62,20 +62,20 @@ Eg .eslintrc
 
 **Default** is intended for those who migrated and especially for our any new codebase.
 
- The default configuration for ES6 code base and it will throw an error for any violation.
+ The default configuration for **ES6** code base and it will throw an error for any violation.
 
-    Add ```"extends": "aw" ```to your .eslintrc.
+    Add "extends": "aw" to your .eslintrc.
 
 ### Default Legacy
 
-  Legacy configuration for ES5 and JQuery code base and it will also throw an error for any violation.
+  Legacy configuration for **ES5** and **JQuery** code base and it will also throw an error for any violation.
 
     Add "extends": "aw/legacy" to your .eslintrc.
 
 
 # Step 2:
 
-  Ways To run eslint.
+  Ways to run ESlint.
 
 ### NPM script
 
@@ -89,7 +89,7 @@ Add script in your package.json.
        --fix-dry-run                  Automatically fix problems without saving the changes to the file system
        --fix-type Array               Specify the types of fixes to apply (problem, suggestion, layout)
 
-For More options: [check here](https://eslint.org/docs/user-guide/command-line-interface#options)
+For more available options in ESlint: [check here](https://eslint.org/docs/user-guide/command-line-interface#options)
 
 
 eg: 
@@ -118,3 +118,4 @@ then,
   npm run lint 
  ```
 
+Note: Will update soon to hook along with webpack and gradle.
