@@ -4,7 +4,7 @@ This style guide is a set of standards(extended from [Airbnb style guide](https:
 
 ## To Install
 
-  [check here.](./package/eslint-config-aw-base/README.md)
+  [![npm version](https://badge.fury.io/js/eslint-config-aw.svg)](https://badge.fury.io/js/eslint-config-aw)  [check here.](./package/eslint-config-aw-base/README.md)
 
 
 ## Usage
@@ -118,4 +118,4 @@ then,
   npm run lint 
  ```
 
-Note: Will update soon to hook along with webpack and gradle.
+Note: Will update soon to hook along with webpack and gradle, Also React.js spec.
