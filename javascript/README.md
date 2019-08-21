@@ -47,8 +47,9 @@ Eg .eslintrc
    -  [Default](#stage-1-default)
  - [Default]()   
    -  [Legacy](#legacy)
-   -  [Default](#default)
- - [Auto Fix](#fixing-problems)
+
+
+[Auto Fix](#fixing-problems)
 
 ## Stage 1
 
