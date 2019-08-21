@@ -2,6 +2,13 @@
 
 This style guide is a set of standards(extended from [Airbnb style guide](https://github.com/airbnb/javascript)) that define how Javascript should be written. Build with [ESLint](https://eslint.org/).
 
+
+## Rules
+
+[check here](https://github.com/airbnb/javascript#table-of-contents)
+
+Note: this guide assumes you are using Babel and it also assumes you are using polyfills in your app for older browsers to support the ES6 and ES7 features.
+
 ## To Install
 
   [![npm version](https://badge.fury.io/js/eslint-config-aw.svg)](https://badge.fury.io/js/eslint-config-aw)  [check here.](./package/eslint-config-aw-base/README.md)
