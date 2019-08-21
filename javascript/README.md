@@ -1,7 +1,8 @@
 # AW Javascript Style Guide
 
-This style guide is a set of standards(extended from [Airbnb style guide](https://github.com/airbnb/javascript)) that define how Javascript should be written. Build with [ESLint](https://eslint.org/).
+This style guide is a set of standards(extended from [Airbnb style guide](https://github.com/airbnb/javascript)) that define how Javascript should be written. 
 
+It's build with [ESLint](https://eslint.org/) tool.
 
 ## Rules
 
