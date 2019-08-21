@@ -7,7 +7,7 @@ This style guide is a set of standards(extended from [Airbnb style guide](https:
 
 [check here](https://github.com/airbnb/javascript#table-of-contents)
 
-Note: this guide assumes you are using Babel and it also assumes you are using polyfills in your app for older browsers to support the ES6 and ES7 features.
+Note: this guide assumes you are using Babel or polyfills in your app for older browsers to support the ES6 and ES7 features.
 
 ## To Install
 
