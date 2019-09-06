@@ -14,7 +14,6 @@ Note: this guide assumes you are using Babel or polyfills in your app for older 
 
   [![npm version](https://badge.fury.io/js/eslint-config-aw.svg)](https://badge.fury.io/js/eslint-config-aw)  [check here.](./package/eslint-config-aw-base/README.md)
 
-
 ## Usage
 
 Please refer the [link](https://eslint.org/docs/user-guide/configuring) to learn more about ESLint configuration and [extending](https://eslint.org/docs/user-guide/configuring#extending-configuration-files).
@@ -128,3 +127,17 @@ then,
  ```
 
 Note: Will update soon to hook along with webpack and gradle, Also React.js spec.
+
+
+## Recommended Editor [VS Code](https://code.visualstudio.com/download)
+
+### Extensions for faster development.  
+  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [Code Spell Checker ](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+  - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+  - [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+  - [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
+  - [JS Refactor](https://marketplace.visualstudio.com/items?itemName=cmstead.jsrefactor)
+  - [ES6 Mocha Snippets](https://marketplace.visualstudio.com/items?itemName=spoonscen.es6-mocha-snippets)
+  - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+  - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
