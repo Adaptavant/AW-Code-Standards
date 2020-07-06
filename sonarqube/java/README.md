@@ -59,11 +59,11 @@ apply plugin: "org.sonarqube"
 
     properties {
 
-        property "sonar.projectKey", "fullmetrics"
-        property "sonar.projectName", "fullmetrics"
-
-        property "sonar.host.url", "http://34.93.51.4:9000/"   
-        property "sonar.token", "899a10b89afb58576aee2dfcf21274d7487afcbd"  //Token of your project
+        property "sonar.projectKey", "fullmetrics"  //your project-key
+        property "sonar.projectName", "fullmetrics" //your project-name
+ 
+        property "sonar.host.url", "'https://sonar.anywhere.co"   
+        property "sonar.token", "<your token>"  //Token of your project
 
     }
 }
@@ -76,22 +76,30 @@ apply plugin: "org.sonarqube"
 ```
 // build.gradle
 
-    subprojects {
+subprojects {
 
-        sonarqube {
+    sonarqube {
 
-            properties {
+        properties {
 
-                property "sonar.sources", "src"
+            property "sonar.sources", "src"
+            
+            // for checkstyle
+            property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/checkstyle-main.xml"
 
-                property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/checkstyle-main.xml"
-                property "sonar.java.pmd.reportPaths", "build/reports/pmd/pmd-main.xml"
-                property "sonar.java.findbugs.reportPaths", "build/reports/findbugs/findbugs-main.xml"
-                property "sonar.junit.reportPaths", "build/reports/tests/test"
+            //for pmd
+            property "sonar.java.pmd.reportPaths", "build/reports/pmd/pmd-main.xml"
 
-            }
+            //for findbugs
+            property "sonar.java.findbugs.reportPaths", "build/reports/findbugs/findbugs-main.xml"
+
+            // for junit
+            
+            property "sonar.junit.reportPaths", "build/reports/tests/test"
+
         }
     }
+}
 
 ```
 
