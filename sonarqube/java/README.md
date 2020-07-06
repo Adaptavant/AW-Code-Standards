@@ -6,4 +6,4 @@ The ability to execute the SonarQube analysis via a regular Gradle task makes it
 
  - [Gradle](gradle/README.md)
 
- - [Maven](Link going to be here )
+ - [Maven](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/)
