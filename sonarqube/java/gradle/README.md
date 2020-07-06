@@ -62,20 +62,35 @@ apply plugin: "org.sonarqube"
 
     subprojects {
 
-    sonarqube {
-        
-        properties {
+        sonarqube {
 
-            property "sonar.sources", "src"
+            properties {
 
-            property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/checkstyle-main.xml"
-            property "sonar.java.pmd.reportPaths", "build/reports/pmd/pmd-main.xml"
-            property "sonar.java.findbugs.reportPaths", "build/reports/findbugs/findbugs-main.xml"
-            property "sonar.junit.reportPaths", "build/reports/tests/test"
+                property "sonar.sources", "src"
+
+                property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/checkstyle-main.xml"
+                property "sonar.java.pmd.reportPaths", "build/reports/pmd/pmd-main.xml"
+                property "sonar.java.findbugs.reportPaths", "build/reports/findbugs/findbugs-main.xml"
+                property "sonar.junit.reportPaths", "build/reports/tests/test"
 
             }
         }
     }
 
 ```
+
+#### Task dependencies
+
+All tasks that produce output that should be included in the SonarQube analysis need to be executed before the sonarqube task runs. Typically, these are compile tasks, test tasks, and code coverage tasks.
+
+Starting with v3.0 of the SonarScanner for Gradle, task dependencies are no longer added automatically. Instead, the SonarScanner plugin enforces the correct order of tasks with mustRunAfter. You need to be either **manually** run the tasks that produce output before sonarqube, or you can add a dependency to the build script:
+
+
+```
+// build.gradle
+
+    project.tasks["sonarqube"].dependsOn "anotherTask"
+
+```
+
 
