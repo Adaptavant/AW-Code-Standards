@@ -8,5 +8,5 @@ The SonarScanner  provides an easy way to start SonarQube analysis of a project.
 
 ## Configuration Guide
 
-    - [Sonarqube/java](java/README.md)
-    - [Sonarqube/javascript (work in progress)](javascript/README.md)
+ - [Sonarqube/java](java/README.md)
+ - [Sonarqube/javascript (work in progress)](javascript/README.md)
