@@ -10,6 +10,8 @@ The SonarScanner for Gradle provides an easy way to start SonarQube analysis of 
 ## Configure the Scanner
 Installation is automatic, but certain global properties should still be configured. A good place to configure global properties is `~/.gradle/gradle.properties` .
 
+properties should be prefixed by `systemProp`.
+
 ```
     # gradle.properties
     systemProp.sonar.host.url=http://localhost:9000
