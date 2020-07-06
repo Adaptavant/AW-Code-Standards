@@ -22,5 +22,31 @@ properties should be prefixed by `systemProp`.
 ```
 
 
-## To Install
+## Analyzing
+To analyze first, include the scanner in your build in build.gradle:
+
+### Using the plugin DSL
+
+```
+plugins {
+  id "org.sonarqube" version "3.0"
+}
+```
+
+### Using legacy plugin application
+```
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0"
+  }
+}
+
+apply plugin: "org.sonarqube"
+
+```
 
