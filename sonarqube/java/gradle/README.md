@@ -55,7 +55,7 @@ apply plugin: "org.sonarqube"
 ```
 
 
-## Configuration shared between subprojects can be configured in a subprojects block.
+#### Configuration shared between subprojects can be configured in a subprojects block.
 
 ```
 // build.gradle
