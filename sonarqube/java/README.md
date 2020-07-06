@@ -26,7 +26,7 @@ The SonarScanner for Gradle provides an easy way to start SonarQube analysis of 
 ## Analyzing
 To analyze first, include the scanner in your build in build.gradle:
 
-### Using the plugin DSL above version 5
+### Using the plugin DSL (above gradle version 5)
 
 ```
 plugins {
@@ -34,7 +34,7 @@ plugins {
 }
 ```
 
-### Using legacy plugin application below 5 
+### Using legacy plugin application (below gradle version 5) 
 ```
 buildscript {
     repositories {
