@@ -6,10 +6,9 @@ The SonarScanner for Gradle provides an easy way to start SonarQube analysis of 
    - Gradle versions 3+
    - At least the minimal version of Java supported by your SonarQube server is in use 
 
-## Rules
 
 ## Configure the Scanner
-    Installation is automatic, but certain global properties should still be configured. A good place to configure global properties is `~/.gradle/gradle.properties` .
+Installation is automatic, but certain global properties should still be configured. A good place to configure global properties is `~/.gradle/gradle.properties` .
 
 ```
     # gradle.properties
