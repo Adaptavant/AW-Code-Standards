@@ -46,11 +46,36 @@ apply plugin: "org.sonarqube"
         property "sonar.projectKey", "fullmetrics"
         property "sonar.projectName", "fullmetrics"
 
-        property "sonar.host.url", "http://34.93.51.4:9000/"    #### url wher sonarqube hosted
-        property "sonar.token", "899a10b89afb58576aee2dfcf21274d7487afcbd" #### Token of your project
+        property "sonar.host.url", "http://34.93.51.4:9000/"   
+        property "sonar.token", "899a10b89afb58576aee2dfcf21274d7487afcbd"  //Token of your project
 
     }
 }
+
+```
+
+
+## Configuration shared between subprojects can be configured in a subprojects block.
+
+```
+// build.gradle
+
+    subprojects {
+
+    sonarqube {
+        
+        properties {
+
+            property "sonar.sources", "src"
+
+            property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/checkstyle-main.xml"
+            property "sonar.java.pmd.reportPaths", "build/reports/pmd/pmd-main.xml"
+            property "sonar.java.findbugs.reportPaths", "build/reports/findbugs/findbugs-main.xml"
+            property "sonar.junit.reportPaths", "build/reports/tests/test"
+
+            }
+        }
+    }
 
 ```
 
