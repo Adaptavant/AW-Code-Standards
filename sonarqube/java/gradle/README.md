@@ -94,3 +94,12 @@ Starting with v3.0 of the SonarScanner for Gradle, task dependencies are no long
 ```
 
 
+#### After all thes steps you are good to go start with analyzing your code by sonarqube.
+Any confusion you have during setup, just reach out to us 
+AW_Platform Team:
+
+`bala.raj@anywhere.co`
+`manjeet.murari@anywhere.co`
+
+
+
