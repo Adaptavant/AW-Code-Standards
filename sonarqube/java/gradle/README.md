@@ -7,21 +7,6 @@ The SonarScanner for Gradle provides an easy way to start SonarQube analysis of 
    - At least the minimal version of Java supported by your SonarQube server is in use 
 
 
-## Configure the Scanner
-Installation is automatic, but certain global properties should still be configured. A good place to configure global properties is `~/.gradle/gradle.properties` .
-
-properties should be prefixed by `systemProp`.
-
-```
-    # gradle.properties
-    systemProp.sonar.host.url=http://localhost:9000
- 
-    #----- Token generated from an account with 'publish analysis' permission
-    systemProp.sonar.login=<token>
-
-```
-
-
 ## Analyzing
 To analyze first, include the scanner in your build in build.gradle:
 
@@ -36,17 +21,36 @@ plugins {
 ### Using legacy plugin application
 ```
 buildscript {
-  repositories {
-    maven {
-      url "https://plugins.gradle.org/m2/"
+    repositories {
+        jcenter()
     }
-  }
-  dependencies {
-    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0"
-  }
+
+    dependencies {
+    
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0"
+    }
 }
 
 apply plugin: "org.sonarqube"
+
+```
+
+## Configure the Scanner
+    For configuration we need to set the sonarqube properties file, as below.
+
+```
+ sonarqube {
+
+    properties {
+
+        property "sonar.projectKey", "fullmetrics"
+        property "sonar.projectName", "fullmetrics"
+
+        property "sonar.host.url", "http://34.93.51.4:9000/"    #### url wher sonarqube hosted
+        property "sonar.token", "899a10b89afb58576aee2dfcf21274d7487afcbd" #### Token of your project
+
+    }
+}
 
 ```
 
