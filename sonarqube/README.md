@@ -5,3 +5,7 @@
 and guiding development teams during Code Reviews.
 The SonarScanner  provides an easy way to start SonarQube analysis of a project.
 
+
+
+-[Sonarqube/java](java/README.md)
+-[Sonarqube/javascript (work in progress)](javascript/README.md)
