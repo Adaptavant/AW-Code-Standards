@@ -84,17 +84,16 @@ subprojects {
 
             property "sonar.sources", "src"
             
-            // for checkstyle
+            // for checkstyle reportspath
             property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/checkstyle-main.xml"
 
-            //for pmd
+            //for pmd reportspath
             property "sonar.java.pmd.reportPaths", "build/reports/pmd/pmd-main.xml"
 
-            //for findbugs
+            //for findbugs reportspath
             property "sonar.java.findbugs.reportPaths", "build/reports/findbugs/findbugs-main.xml"
 
-            // for junit
-            
+            // for junit reportspath
             property "sonar.junit.reportPaths", "build/reports/tests/test"
 
         }
