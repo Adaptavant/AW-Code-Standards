@@ -53,7 +53,7 @@ apply plugin: "org.sonarqube"
 
 ```
 
-## To Configure the Scanner Properties for Single Module Gradle. :file_folder:
+## To Configure the Scanner Properties for Single Module Gradle.
   
   set the sonarqube properties in build file, as below.
 
@@ -86,7 +86,7 @@ apply plugin: "org.sonarqube"
 ```
 
 
-## To Configure Multi-Module Project. :open_file_folder:
+## To Configure Multi-Module Project.
 
 ```
 // build.gradle
