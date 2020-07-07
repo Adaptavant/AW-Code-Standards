@@ -62,7 +62,7 @@ apply plugin: "org.sonarqube"
         property "sonar.projectKey", "fullmetrics"  //your project-key
         property "sonar.projectName", "fullmetrics" //your project-name
  
-        property "sonar.host.url", "'https://sonar.anywhere.co"   
+        property "sonar.host.url", "https://sonar.anywhere.co"   
         property "sonar.token", "<your token>"  //Token of your project
 
     }
