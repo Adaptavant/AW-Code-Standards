@@ -53,7 +53,7 @@ apply plugin: "org.sonarqube"
 
 ```
 
-## To Configure the Scanner Properties for Single Module Gradle.
+## To Configure the Scanner Properties for Single Module Gradle. :file_folder:
   
   set the sonarqube properties in build file, as below.
 
@@ -86,7 +86,7 @@ apply plugin: "org.sonarqube"
 ```
 
 
-## To Configure Multi-Module Project.
+## To Configure Multi-Module Project. :open_file_folder:
 
 ```
 // build.gradle
@@ -111,7 +111,7 @@ subprojects {
 
         properties {
 
-            property "sonar.sources", "src"
+            property "sonar.sources", "src" 
             
             // for checkstyle reportspath
             property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/checkstyle-main.xml"
@@ -131,7 +131,7 @@ subprojects {
 
 ```
 
-#### Task dependencies 
+#### Task dependencies :paperclip:
 
 All tasks that produce output that should be included in the SonarQube analysis need to be executed before the sonarqube task runs. Typically, these are compile tasks, test tasks, and code coverage tasks.
 
