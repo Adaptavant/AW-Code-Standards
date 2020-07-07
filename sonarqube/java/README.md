@@ -6,7 +6,7 @@ The ability to execute the SonarQube analysis via a regular Gradle task makes it
 
  - [Gradle](#Gradle)
    - [For Single Module](#To-Configure-the-Scanner-Properties-for-Single-Module-Gradle)
-   - [For Multi Module](#To-Configure-Multi-Module-Project.)
+   - [For Multi Module](#To-Configure-Multi-Module-Project)
 
  - [Maven](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/)
 
