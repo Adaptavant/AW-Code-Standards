@@ -70,3 +70,7 @@ Using yarn:
 ``` $ sonar-scanner ```
 
 
+
+[For more details please refer the docs:jest-sonar-reporter](https://www.npmjs.com/package/jest-sonar-reporter)
+
+
