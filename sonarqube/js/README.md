@@ -15,7 +15,7 @@ Using yarn:
 ``` $ yarn add -D jest-sonar-reporter ```
 
 
-### JSON Configurtion 
+### JSON Configuration 
 
 ``` //json
 
