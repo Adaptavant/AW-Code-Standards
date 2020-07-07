@@ -4,7 +4,7 @@
 `sonarqube-scanner` makes it very easy to trigger SonarQube / SonarCloud analyses on a JavaScript code base, without needing to install any specific tool or (Java) runtime.
 
 
-## Installation 
+## Installation :computer:
 
 This package is available on npm as: `sonarqube-scanner`
 To add code analysis to your build files, simply add the package to your project dev dependencies:
@@ -28,7 +28,7 @@ To install the scanner globally and be able to run analyses on the command line:
 
  ```
 
- **sonarqube.js** file 
+ **sonarqube.js**   :page_facing_up:
 
  ```
    const scanner = require('sonarqube-scanner');
@@ -54,17 +54,13 @@ To install the scanner globally and be able to run analyses on the command line:
 ```
 
 
-#### Usage 
+### Using npm scan you can push your reports : :racehorse:
 
- - scan
-
-Using npm:
-
-```npm scan ```
+```npm scan ``` :white_check_mark:
 
 
 
-#### If you are using jest 
+#### If you are using jest :point_down:
 [Please refer the docs:jest-sonar-reporter](https://www.npmjs.com/package/jest-sonar-reporter)
 
 
