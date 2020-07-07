@@ -5,6 +5,8 @@ The SonarScanner for Gradle provides an easy way to start SonarQube analysis of 
 The ability to execute the SonarQube analysis via a regular Gradle task makes it available anywhere Gradle is available (developer build, CI server, etc.), without the need to manually download, setup, and maintain a SonarQube Runner installation. The Gradle build already has much of the information needed for SonarQube to successfully analyze a project. By preconfiguring the analysis based on that information, the need for manual configuration is reduced significantly.
 
  - [Gradle](#Gradle)
+   - [For Single Module](#To-Configure-the-Scanner-Properties-for-Single-Module-Gradle)
+   - [For Multi Module](#To-Configure-Multi-Module-Project.)
 
  - [Maven](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/)
 
@@ -51,8 +53,9 @@ apply plugin: "org.sonarqube"
 
 ```
 
-## Configure the Scanner
-    For configuration we need to set the sonarqube properties file, as below.
+## To Configure the Scanner Properties for Single Module Gradle.
+  
+  set the sonarqube properties in build file, as below.
 
 ```
  sonarqube {
@@ -65,17 +68,43 @@ apply plugin: "org.sonarqube"
         property "sonar.host.url", "https://sonar.anywhere.co"   
         property "sonar.token", "<your token>"  //Token of your project
 
+        // for checkstyle reportspath
+        property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/checkstyle-main.xml"
+
+        //for pmd reportspath
+        property "sonar.java.pmd.reportPaths", "build/reports/pmd/pmd-main.xml"
+
+        //for findbugs reportspath
+        property "sonar.java.findbugs.reportPaths", "build/reports/findbugs/findbugs-main.xml"
+
+        // for junit reportspath
+        property "sonar.junit.reportPaths", "build/reports/tests/test"
+
     }
 }
 
 ```
 
 
-#### Configuration shared between subprojects can be configured in a subprojects block.
+## To Configure Multi-Module Project.
 
 ```
 // build.gradle
 
+sonarqube {
+
+    properties {
+
+        property "sonar.projectKey", "fullmetrics"  //your project-key
+        property "sonar.projectName", "fullmetrics" //your project-name
+ 
+        property "sonar.host.url", "https://sonar.anywhere.co"   
+        property "sonar.token", "<your token>"  //Token of your project
+        
+    }
+}
+
+//  Put sonarqueb properties within subprojects block, which applies for each module automatically.
 subprojects {
 
     sonarqube {
