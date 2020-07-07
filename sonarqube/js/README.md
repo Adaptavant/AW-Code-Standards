@@ -1,18 +1,19 @@
 
-## jest-sonar-reporter
+## NPM module to run SonarQube/SonarCloud analyses
 
-jest-sonar-reporter is a custom results processor for Jest. The processor converts Jest's output into Sonar's generic test data format.
+`sonarqube-scanner` makes it very easy to trigger SonarQube / SonarCloud analyses on a JavaScript code base, without needing to install any specific tool or (Java) runtime.
 
 
 ## Installation 
 
-Using npm:
+This package is available on npm as: `sonarqube-scanner`
+To add code analysis to your build files, simply add the package to your project dev dependencies:
 
-``` $ npm i -D jest-sonar-reporter ```
+``` npm install -D sonarqube-scanner ```
 
-Using yarn:
+To install the scanner globally and be able to run analyses on the command line:
 
-``` $ yarn add -D jest-sonar-reporter ```
+``` npm install -g sonarqube-scanner ```
 
 
 ### JSON Configuration 
@@ -34,16 +35,16 @@ Using yarn:
 
    scanner(
    {
-     serverUrl: 'https://sonar.anywhere.co',
-     token: '<<your project token >>',
+     serverUrl: 'https://sonar.anywhere.co',  // hosted url for sonar 
+     token: '<<your project token >>',  // your project token
      options: {
-     'sonar.projectKey': 'aw-hours',
-     'sonar.projectName': 'Anywhere-Hours',
+     'sonar.projectKey': 'aw-hours',  // your project key 
+     'sonar.projectName': 'Anywhere-Hours', // your project name 
      'sonar.sources': 'server',
      'sonar.tests': 'spec',
      'sonar.test.inclusions': 'spec/**/*.test.jsx,src/**/*.spec.jsx,src/**/*.test.js,src/**/*.test.jsx', 
      'sonar.testExecutionReportPaths': './test-report.xml',
-     'sonar.eslint.reportPaths': './eslint-report.json',
+     //'sonar.eslint.reportPaths': './eslint-report.json', //if your are using eslint reports then add or else ignore this.
      },
    },
 
@@ -55,22 +56,15 @@ Using yarn:
 
 #### Usage 
 
- - Run Jest to execute your tests.
+ - scan
 
 Using npm:
 
-``` $ npm run test ```
-
-Using yarn:
-
-``` $ yarn run test ```
-
- - Run sonar-scanner to import the test results.
-
-``` $ sonar-scanner ```
+```npm scan ```
 
 
 
-[For more details please refer the docs:jest-sonar-reporter](https://www.npmjs.com/package/jest-sonar-reporter)
+#### If you are using jest 
+[Please refer the docs:jest-sonar-reporter](https://www.npmjs.com/package/jest-sonar-reporter)
 
 
