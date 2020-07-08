@@ -21,7 +21,7 @@ The ability to execute the SonarQube analysis via a regular Gradle task makes it
 
 
 ## Analyzing
-To analyze first, include the scanner in your build in build.gradle:
+To analyze, include the scanner plugin in buildscript:
 
 ### Using the plugin DSL (above gradle version 5)
 
