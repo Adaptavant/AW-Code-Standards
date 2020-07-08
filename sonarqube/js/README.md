@@ -56,7 +56,7 @@ To install the scanner globally and be able to run analyses on the command line:
 
 ### Using npm scan you can push your reports : :racehorse:
 
-```npm scan ``` :white_check_mark:
+```npm run scan ``` :white_check_mark:
 
 
 
