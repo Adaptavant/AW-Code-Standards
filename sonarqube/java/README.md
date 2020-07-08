@@ -15,11 +15,6 @@ The ability to execute the SonarQube analysis via a regular Gradle task makes it
 
 # Gradle
 
-
-The SonarScanner for Gradle provides an easy way to start SonarQube analysis of a Gradle project. 
-
-
-
 ## Prerequisites
    - Gradle versions 3+
    - At least the minimal version of Java supported by your SonarQube server is in use,`SonarQube` scanners require version `8` or `11` of the `JVM` and the SonarQube server requires version `11`
