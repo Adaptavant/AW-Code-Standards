@@ -7,6 +7,7 @@ The SonarScanner  provides an easy way to start SonarQube analysis of a project.
 
 [https://sonar.anywhere.co/](https://sonar.anywhere.co/)
 
+Note: Recommanding to create project same as github and We also synced Github Teams for sharing access.
 
 ## Configuration Guide For Languages
 
