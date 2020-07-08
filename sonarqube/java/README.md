@@ -66,15 +66,15 @@ apply plugin: "org.sonarqube"
         property "sonar.projectName", "fullmetrics" //your project-name
  
         property "sonar.host.url", "https://sonar.anywhere.co"   
-        property "sonar.token", "<your token>"  //Token of your project
+        property "sonar.token", "<your token>"  // You can create project and generate token here https://sonar.anywhere.co
 
         // for checkstyle reportspath
         property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/checkstyle-main.xml"
 
-        //for pmd reportspath
+        // for pmd reportspath
         property "sonar.java.pmd.reportPaths", "build/reports/pmd/pmd-main.xml"
 
-        //for findbugs reportspath
+        // for findbugs reportspath
         property "sonar.java.findbugs.reportPaths", "build/reports/findbugs/findbugs-main.xml"
 
         // for junit reportspath
@@ -84,7 +84,7 @@ apply plugin: "org.sonarqube"
 }
 
 ```
-
+[For more info](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-gradle/)
 
 ## To Configure Multi-Module Project.
 
@@ -99,7 +99,7 @@ sonarqube {
         property "sonar.projectName", "fullmetrics" //your project-name
  
         property "sonar.host.url", "https://sonar.anywhere.co"   
-        property "sonar.token", "<your token>"  //Token of your project
+        property "sonar.token", "<your token>"  // You can create project and generate token here https://sonar.anywhere.co
         
     }
 }
@@ -116,10 +116,10 @@ subprojects {
             // for checkstyle reportspath
             property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/checkstyle-main.xml"
 
-            //for pmd reportspath
+            // for pmd reportspath
             property "sonar.java.pmd.reportPaths", "build/reports/pmd/pmd-main.xml"
 
-            //for findbugs reportspath
+            // for findbugs reportspath
             property "sonar.java.findbugs.reportPaths", "build/reports/findbugs/findbugs-main.xml"
 
             // for junit reportspath
