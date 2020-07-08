@@ -9,28 +9,38 @@
 This package is available on npm as: `sonarqube-scanner`
 To add code analysis to your build files, simply add the package to your project dev dependencies:
 
-``` npm install -D sonarqube-scanner ```
+```cmd 
+npm install -D sonarqube-scanner 
+```
 
 To install the scanner globally and be able to run analyses on the command line:
 
-``` npm install -g sonarqube-scanner ```
+```cmd 
+npm install -g sonarqube-scanner 
+```
 
 
 ### JSON Configuration 
 
-``` //json
+```json
 
+ // script to generate report 
  "test:report": "jest --coverage",
 
+ // script to generate report
  "lint:report": "eslint ./server ./spec --fix -o ./eslint-report.json",
 
+ // script to scan and publish the reports. 
  "scan": "npm run test:report && npm run lint:report && node sonarqube.js"  // we need to create sonarqube.js file 
+ or 
+ // Just to run only scan without test and lint report. 
+ "scan": "node sonarqube.js"  // we need to create sonarqube.js file 
 
  ```
 
  **sonarqube.js**   :page_facing_up:
 
- ```
+ ```js
    const scanner = require('sonarqube-scanner');
 
    scanner(
@@ -54,10 +64,11 @@ To install the scanner globally and be able to run analyses on the command line:
 ```
 
 
-### Using npm scan you can push your reports : :racehorse:
+### Using npm scan script can push your reports : :racehorse:
 
-```npm run scan ``` :white_check_mark:
-
+```cmd:white_check_mark:
+ npm run scan
+```
 
 
 #### If you are using jest :point_down:
