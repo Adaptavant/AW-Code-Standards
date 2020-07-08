@@ -53,8 +53,8 @@ npm install -g sonarqube-scanner
      'sonar.sources': 'server',
      'sonar.tests': 'spec',
      'sonar.test.inclusions': 'spec/**/*.test.jsx,src/**/*.spec.jsx,src/**/*.test.js,src/**/*.test.jsx', 
-     'sonar.testExecutionReportPaths': './test-report.xml',
-     //'sonar.eslint.reportPaths': './eslint-report.json', //if your are using eslint reports then add or else ignore this.
+     'sonar.testExecutionReportPaths': 'test-report.xml',
+     //'sonar.eslint.reportPaths': 'eslint-report.json', //if your are using eslint reports then add or else ignore this.
      },
    },
 
