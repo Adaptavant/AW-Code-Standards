@@ -94,7 +94,7 @@ sonarqube {
         property "sonar.projectName", "fullmetrics" //your project-name
  
         property "sonar.host.url", "https://sonar.anywhere.co"   
-        property "sonar.token", "<your token>"  // You can create project and generate token here https://sonar.anywhere.co
+        property "sonar.login", "<your token>"  // You can create project and generate token here https://sonar.anywhere.co
         
     }
 }
