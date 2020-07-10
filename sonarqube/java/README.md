@@ -140,4 +140,4 @@ Starting with v3.0 of the SonarScanner for Gradle, task dependencies are no long
 
 ```
 
-Note: Don't forgot add auto generated files in .gitignore
+Note: Don't forget to add auto-generated files in .gitignore
