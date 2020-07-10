@@ -70,7 +70,7 @@ npm install -g sonarqube-scanner
  npm run scan
 ```
 
-Note: Don't forgot add auto generated files in .gitignore
+Note: Don't forget to add auto-generated files in .gitignore
 
 #### If you are using jest :point_down:
 [Please refer the docs:jest-sonar-reporter](https://www.npmjs.com/package/jest-sonar-reporter)
