@@ -8,16 +8,17 @@ The SonarScanner provides an easy way to start SonarQube analysis of a project.
 [https://sonar.anywhere.co/](https://sonar.anywhere.co/)
 
 It works with your Github account.
+Github Teams are also synced for sharing access.
 
-Note: Recommending to create project same as Github and We also synced Github Teams for sharing access.
+Note: We recommend to create project, same as GitHub. 
 
 
 ## How to create a project in SonarQube
 - Login with GitHub and navigate to [https://sonar.anywhere.co/projects/create](https://sonar.anywhere.co/projects/create)
-- Enter the name of the Project in 'Project Key' and 'Display name' fields and click on 'Set Up'.(Recommend to use the name of the Repository)
+- Enter the name of the Project in 'Project Key' and 'Display name' fields and click on 'Set Up'.(We recommend to use the name of the GitHub Repository)
 <img src="https://storage.googleapis.com/itsite/Sonar/0.png">
 
-- Enter the same name under the 'Provide a token' field and click on 'Generate'.
+- Enter a name under the 'Provide a token' field and click on 'Generate'.
 <img src="https://storage.googleapis.com/itsite/Sonar/2.png">
 
 - Copy and save this Token and click on 'Continue'
