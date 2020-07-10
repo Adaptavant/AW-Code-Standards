@@ -1,11 +1,11 @@
 ## How to create a project in SonarQube
 - Login with GitHub and navigate to [https://sonar.anywhere.co/projects/create](https://sonar.anywhere.co/projects/create)
 - Enter the name of the Project in 'Project Key' and 'Display name' fields and click on 'Set Up'.(Recommend to use the name of the Repository)
-<img src="https://storage.googleapis.com/itsite/Sonar/1.png">
+  <img src="https://storage.googleapis.com/itsite/Sonar/1.png" width="150">
 - Enter the same name under the 'Provide a token' field and click on 'Generate'.
-<img src="https://storage.googleapis.com/itsite/Sonar/2.png">
+  <img src="https://storage.googleapis.com/itsite/Sonar/2.png">
 - Copy and save this Token and click on 'Continue'
-<img src="https://storage.googleapis.com/itsite/Sonar/3.png">
+  <img src="https://storage.googleapis.com/itsite/Sonar/3.png">
 - Follow the Configuration Guides for [java](java/README.md) and [javascript](js/README.md) with this generated Token.
 
 ## SonarQube Configurations
