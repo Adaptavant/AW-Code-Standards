@@ -13,6 +13,8 @@
     <exclude name="LooseCoupling" />
     <exclude name="OneDeclarationPerLine" />
 
+    <exclude name="GuardLogStatement" />
+
     <!-- Duplicate of Checkstyle's UnusedImports, which understands javadoc -->
     <exclude name="UnusedImports"/>
     <exclude name="UseVarargs"/>
@@ -25,6 +27,9 @@
   </rule>
 
   <rule ref="category/java/codestyle.xml">
+	 
+    <exclude name="CommentDefaultAccessModifier"/> 
+
     <!-- Confusing ternary needs special configuration -->
     <exclude name="ConfusingTernary"/>
     
