@@ -19,6 +19,6 @@ Note: this guide assumes you are using any build tools like for java Maven, Grad
  - [Javascript](javascript)
  - [Python](python)
 
-## [To Setup SonarQube](sonarqube/README.md)
+## [To Setup SonarQube](sonarqube)
 
     
