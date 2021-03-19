@@ -27,5 +27,6 @@ Note: We recommend to create project, same as GitHub.
 
 ## Configuration Guide For Languages
 
- - [java](java/README.md)
- - [javascript](js/README.md)
+ - [java](java)
+ - [javascript](js)
+ - [python](python)
