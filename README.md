@@ -15,9 +15,9 @@ So it's time for us to build our ecosystem together and help each other to have 
     
 Note: this guide assumes you are using any build tools like for java Maven, Gradle and for Javascript WebPack, Gulp or Grunt.
 
- - [Java](java/README.md)
+ - [Java](java)
  - [Javascript](javascript)
- - [Python(Working on it.)](python-style-guide)
+ - [Python](python)
 
 ## [To Setup SonarQube](sonarqube/README.md)
 
