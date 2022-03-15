@@ -19,9 +19,9 @@ To install the scanner globally and be able to run analyses on the command line:
 npm install -g sonarqube-scanner 
 ```
 
-### nodejs.yml file Configuration
- To configure the scanner to run on your pull request or feature branch, you can add the following configuration.
-   open .github/workflows/nodejs.yml and paste the environment variables below into your `nodejs.yml` file. 
+### Workflow file Configuration
+ To configure the sonarqube scanner for pull request in Github actions or to run in local feature branch, you can add the following configuration.
+   open `.github/workflows/{actions.yml}` and paste the environment variables given below under jobs -> env in `.yml` file.
 
 ```cmd
 env:

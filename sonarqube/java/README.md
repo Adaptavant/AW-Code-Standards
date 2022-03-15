@@ -49,9 +49,9 @@ apply plugin: "org.sonarqube"
 ```
 
 ## To Configure the Scanner Properties for Single Module Gradle.
-### AwHoursApi.yml file Configuration
- To configure the scanner to run on your pull request or feature branch, you can add the following configuration.
-   open .github/workflows/AwHoursApi.yml and paste the environment variables below into your `AwHoursApi.yml` file. 
+### Workflow file Configuration
+ To configure the sonarqube scanner for pull request in Github actions or to run in local feature branch, you can add the following configuration.
+   open `.github/workflows/{actions.yml}` and paste the environment variables given below under jobs -> env in `.yml` file.
 
 ```cmd
 env:
