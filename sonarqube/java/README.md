@@ -49,10 +49,35 @@ apply plugin: "org.sonarqube"
 ```
 
 ## To Configure the Scanner Properties for Single Module Gradle.
-  
+### AwHoursApi.yml file Configuration
+ To configure the scanner to run on your pull request or feature branch, you can add the following configuration.
+   open .github/workflows/AwHoursApi.yml and paste the environment variables below into your `AwHoursApi.yml` file. 
+
+```cmd
+env:
+   BASE_BRANCH: ${{github.event.pull_request.base.ref}}
+   HEAD_BRANCH: ${{github.event.pull_request.head.ref}}
+   PR_ID: ${{github.event.number}}
+   IS_PULL_REQUEST_MERGED: ${{github.event.pull_request.merged}}
+```      
+
+ - BASE_BRANCH is the name of the branch that the PR is targeting.
+ - HEAD_BRANCH is the name of the branch that the PR is currently on. 
+ - PR_ID is the ID of the PR.
+ - IS_PULL_REQUEST_MERGED is a boolean value that is true if the PR is merged.
   set the sonarqube properties in build file, as below.
 
 ```
+
+ static gitBranch() {
+    def branch = ""
+    def proc = "git rev-parse --abbrev-ref HEAD".execute()
+    proc.in.eachLine { line -> branch = line }
+    proc.err.eachLine { line -> println line }
+    proc.waitFor()
+    branch
+ }
+
  sonarqube {
 
     properties {
@@ -75,6 +100,21 @@ apply plugin: "org.sonarqube"
         // for junit reportspath
         property "sonar.junit.reportPaths", "build/reports/tests/test"
 
+        // for jacoco code coverage reportpath
+        property "sonar.coverage.jacoco.xmlReportPaths", "./build/reports/jacoco/test/jacocoTestReport.xml"
+
+        if (System.getenv("CI")){
+          if (System.getenv("IS_PULL_REQUEST_MERGED").equals("true")) {
+		    property "sonar.branch.name", System.getenv("BASE_BRANCH")
+	      } else {
+            property "sonar.pullrequest.key", System.getenv("PR_ID")
+            property "sonar.pullrequest.base", System.getenv("BASE_BRANCH")
+            property "sonar.pullrequest.branch", System.getenv("HEAD_BRANCH")
+          }
+        } else {
+            def currentBranch = gitBranch()
+            property "sonar.branch.name", currentBranch
+        }
     }
 }
 
