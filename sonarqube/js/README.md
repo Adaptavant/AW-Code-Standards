@@ -19,7 +19,21 @@ To install the scanner globally and be able to run analyses on the command line:
 npm install -g sonarqube-scanner 
 ```
 
+### Workflow file Configuration
+ To configure the sonarqube scanner for pull request in Github actions or to run in local feature branch, you can add the following configuration.
+   open `.github/workflows/{actions.yml}` and paste the environment variables given below under jobs -> env in `.yml` file.
 
+```cmd
+env:
+   BASE_BRANCH: ${{github.event.pull_request.base.ref}}
+   HEAD_BRANCH: ${{github.event.pull_request.head.ref}}
+   PR_ID: ${{github.event.number}}
+   IS_PULL_REQUEST_MERGED: ${{github.event.pull_request.merged}}
+```      
+ - BASE_BRANCH is the name of the branch that the PR is targeting.
+ - HEAD_BRANCH is the name of the branch that the PR is currently on. 
+ - PR_ID is the ID of the PR.
+ - IS_PULL_REQUEST_MERGED is a boolean value that is true if the PR is merged.
 ### JSON Configuration 
 
 ```json
@@ -41,26 +55,39 @@ npm install -g sonarqube-scanner
  **sonarqube.js**   :page_facing_up:
 
  ```js
-   const scanner = require('sonarqube-scanner');
+const scanner = require('sonarqube-scanner');
 
-   scanner(
-   {
-     serverUrl: 'https://sonar.anywhere.co',  // hosted url for sonar 
-     token: '<<your project token >>',  // your project token
-     options: {
-     'sonar.projectKey': 'aw-hours',  // your project key 
-     'sonar.projectName': 'Anywhere-Hours', // your project name 
-     'sonar.sources': 'server',
-     'sonar.tests': 'spec',
-     'sonar.test.inclusions': 'spec/**/*.test.jsx,src/**/*.spec.jsx,src/**/*.test.js,src/**/*.test.jsx', 
-     'sonar.testExecutionReportPaths': 'test-report.xml',
-     //'sonar.eslint.reportPaths': 'eslint-report.json', //if your are using eslint reports then add or else ignore this.
-     },
-   },
+const options = {
+	'sonar.projectKey': 'anywhere-hours',
+	'sonar.projectName': 'Anywhere-hours',
+	'sonar.sources': 'server',
+	'sonar.tests': 'spec',
+	'sonar.test.inclusions': 'spec/**/*.test.jsx,src/**/*.spec.jsx,src/**/*.test.js,src/**/*.test.jsx',
+	'sonar.testExecutionReportPaths': 'test-report.xml',
+	//'sonar.eslint.reportPaths': 'eslint-report.json', //if your are using eslint reports then add or else ignore this.
+};
 
-  () => process.exit(),
+if (process.env.CI) {
+	if (process.env.IS_PULL_REQUEST_MERGED === 'true') {
+		options['sonar.branch.name'] = process.env.BASE_BRANCH;
+	} else {
+		options['sonar.pullrequest.key'] = process.env.PR_ID;
+		options['sonar.pullrequest.base'] = process.env.BASE_BRANCH;
+		options['sonar.pullrequest.branch'] = process.env.HEAD_BRANCH;
+	}
+} else {
+	const getCurrentBranchName = require('node-git-current-branch');
+	options['sonar.branch.name'] = getCurrentBranchName();
+}
+
+scanner({
+		serverUrl: 'https://sonar.anywhere.co', // hosted url for sonar 
+		token: '<<your project token >>', // your project token
+		options,
+	},
+
+	() => process.exit(),
 );
-
 ```
 
 
