@@ -2,6 +2,7 @@
 # Why Coding Standards And Linting Matters
 
   
+
 Coding standards are a set of guidelines, best practices, programming styles and conventions that developers adhere to when writing source code for a project. Most of the top companies have them.
 
 A coding standards document tells developers how they must write their code. Instead of each developer coding in their own preferred style, they will write all code to the standards outlined in the document. This makes sure that a large project is coded in a consistent style — parts are not written differently by different programmers. Not only does this solution make the code easier to understand, but it also ensures that any developer who looks at the code will know what to expect throughout the entire application.
