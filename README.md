@@ -1,5 +1,8 @@
 # Public AW-Code-Standards
 
+
+# This is Deprecated now and please [check Here](https://github.com/Adaptavant/Adaptavant-AW-Code-Standards-Internal) for latest 
+
 At AnywhereWorks, we believe that having good, automated quality checks of our code helps us work faster, more efficiently, and with less errors. This public (as in public to the entire world) repository contains AnywhereWorks' configuration for eslint and other code quality tools. To apply these standards to your own code, see the links to the instructions below.
 
 # Why Coding Standards And Linting Matters
